@@ -1,0 +1,24 @@
+<div class="carousel-container">
+  <div class="container">
+    <img *ngIf="count > 0" src="https://uploaddeimagens.com.br/images/004/799/729/full/Back.png?1718624956" alt="Anterior" class="transition" style="cursor: pointer;" (click)="handleBackClick()"/>
+    <div class="slide">
+      <div class="column1">
+        <div class="center">
+          <div class="title" [innerHTML]="dataCarousel[count].title"></div>
+          <br />
+          <div class="text">{{ dataCarousel[count].text }}</div>
+          <br />
+          <div class="linkText">
+            <a [href]="dataCarousel[count].link" target="_blank" rel="noopener noreferrer">
+              {{ dataCarousel[count].linkText }}
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="column2">
+        <img [src]="dataCarousel[count].image" alt="Imagem do carrossel" />
+      </div>
+    </div>
+    <img *ngIf="count < dataCarousel.length - 1" src="https://uploaddeimagens.com.br/images/004/799/730/full/Next.png?1718624983" alt="Próximo" class="transition" style="cursor: pointer;" (click)="handleNextClick()"/>
+  </div>
+</div>
