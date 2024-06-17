@@ -15,6 +15,9 @@ export class SlidesImageComponent implements OnInit, AfterViewInit {
   @ViewChild('slide', { static: true }) slide!: ElementRef;
 
   constructor(private renderer: Renderer2) {}
+  ngAfterViewInit(): void {
+    throw new Error('Method not implemented.');
+  }
 
   ngOnInit(): void {
     this.dataCarousel = [
@@ -47,17 +50,16 @@ export class SlidesImageComponent implements OnInit, AfterViewInit {
         image: 'https://uploaddeimagens.com.br/images/004/799/727/full/Image4.png?1718624742',
       },
     ];
-  }
 
-  ngAfterViewInit(): void {
-    this.renderer.listen(this.slide?.nativeElement, 'transitionend', () => {
-      this.renderer.removeClass(this.slide.nativeElement, 'fade-out');
+    const slide = document.querySelector('.slide');
+    slide?.addEventListener('transitionend', () => {
+      slide.classList.remove('fade-out');
     });
   }
 
   handleBackClick(): void {
     if (this.count > 0) {
-      this.renderer.addClass(this.slide.nativeElement, 'fade-out');
+      document.querySelector('.slide')?.classList.add('fade-out');
       setTimeout(() => {
         this.count--;
       }, 300);
@@ -66,7 +68,7 @@ export class SlidesImageComponent implements OnInit, AfterViewInit {
 
   handleNextClick(): void {
     if (this.count < this.dataCarousel.length - 1) {
-      this.renderer.addClass(this.slide.nativeElement, 'fade-out');
+      document.querySelector('.slide')?.classList.add('fade-out');
       setTimeout(() => {
         this.count++;
       }, 300);
