@@ -1,10 +1,10 @@
-.logo{
+.logo {
   width: 200px;
-    height: auto;
-    padding-right: 10px;
+  height: auto;
+  padding-right: 10px;
 }
 
-.menuBar{
+.menuBar {
   position: relative;
   top: 0;
   left: 50%;
@@ -16,26 +16,24 @@
   justify-content: space-between;
   align-items: center;
   background-color: #eee;
-  border-bottom: 2px solid #666 ;
+  border-bottom: 2px solid #666;
 }
 
-.menuBarNav{
+.menuBarNav {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
-.link{
-  font-size: 1.2em ;
+.link {
+  font-size: 1.2em;
   font-weight: 600;
   line-height: 21px;
   text-align: left;
-
   color: #666;
   cursor: pointer;
 }
 
-.marginL100{
+.marginL100 {
   margin-right: 100px;
 }

@@ -1,15 +1,17 @@
+  <!-- Tentei usar o routerLink, mas não consegui fazer funcionar-->
 <nav class="menuBar">
-  <a routerLink="/" class="link" to="about">
-    <img src='https://www.datacempro.com.br/ImagesDTC/Logos/2022/logo_site.png' alt="Teste" class="logo" />
+  <a (click)="navigateToHome()" routerLink="/" class="link">
+    <img src="https://www.datacempro.com.br/ImagesDTC/Logos/2022/logo_site.png" alt="Teste" class="logo" />
   </a>
   <nav class="menuBarNav">
-    <a style="cursor: pointer;" routerLink="/contatos" routerLinkActive="selected" class="link marginL100">
+    <a (click)="navigateToQuemSomos()"  class="link marginL100">
       Sobre nós
     </a>
-    <a  style="cursor: pointer;"  routerLink="/quemSomos" routerLinkActive="selected"  class="link">
+    <a  (click)="navigateToContatos()" class="link">
       Contato
     </a>
-    <div className="button">
+    <div class="button">
+
     </div>
   </nav>
 </nav>
