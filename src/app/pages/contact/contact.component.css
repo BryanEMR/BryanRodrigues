@@ -1,0 +1,92 @@
+.container {
+  padding: 10vh 15vh;
+  color: #6f6f6f;
+  width: calc(100% - 30vh);
+  justify-content: center;
+}
+
+.container .row {
+  display: flex;
+  text-align: left;
+}
+
+.container .column1 {
+  width: 60%;
+  color: #5e5873;
+  padding: 0 50px 0 0;
+}
+
+.container .column2 {
+  width: 40%;
+}
+
+.container .text {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 31.9px;
+}
+
+@media (max-width: 1300px) {
+  .container .text {
+    font-size: 18px;
+  }
+}
+
+.container .title {
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 59.73px;
+  color: #d71920;;
+}
+
+@media (max-width: 1300px) {
+  .container .title {
+    font-size: 49px;
+  }
+}
+
+.container input,
+.container select,
+.container textarea {
+  padding: 7px 10px;
+  height: auto;
+  border: 1px solid #d8d6de;
+  border-radius: 5px;
+  margin-bottom: 16px;
+  color: #666
+}
+
+.container input,
+.container textarea {
+  width: 100%;
+}
+
+.container select{
+  width: calc(100% + 20px);
+}
+
+.container label {
+  color: #6f6f6f;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.container button {
+  width: 141px;
+  height: 32px;
+  color: white;
+  background: #d71920;
+  border-radius: 5px;
+  border: 0;
+}
+
+.icone {
+  padding-left: 4px;
+}
+
+.text-danger{
+  color:  #d71920;
+  margin: 0;
+  padding: 0;
+}

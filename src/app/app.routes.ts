@@ -5,7 +5,7 @@ import { CompanyComponent } from './pages/company/company.component';
 import { NgModule } from '@angular/core';
 
 export const routes: Routes = [
-  {path: '', component:HomeComponent, title:'Home'},
+  {path: '', component:ContactComponent, title:'Home'},
   {path: 'contatos', component: ContactComponent, title:'Contatos'},
   {path: 'quem_somos', component: CompanyComponent, title:"Quem Somos"},
 ];
